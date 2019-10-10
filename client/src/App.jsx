@@ -13,8 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <div>First photo URL: {(this.state.photos[0]) && this.state.photos[0].url}</div> */}
-        <img src={(this.state.photos[0]) ? this.state.photos[0].url : null} alt="castle"></img>
+        <img src={(this.state.photos[0]) ? this.state.photos[0].url : null}></img>
         <div>{(this.state.photos[0]) && this.state.photos[0].description}</div>
       </div>
     )
@@ -22,7 +21,6 @@ class App extends React.Component {
 
   componentDidMount() {
     $.get(`/photos/${this.state.listingId}`, null, (photos) => {
-      console.log('photos received for listing', photos);
       this.setState({photos: photos});
     }, 'json');
   }

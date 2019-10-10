@@ -10,7 +10,7 @@ var seedDb = function(maxRecords) {
     // todo later: s3 links, varying number of pics
     var listing = {
       listingId: i,
-      photos: [{url: 'https://picsum.photos/300/200', description: 'some description 0'}, {url: 'https://picsum.photos/300/200', description: 'some description 1'}]
+      photos: [{url: 'https://picsum.photos/id/1040/300/200', description: `Some description for first photo of listingId ${i}`}, {url: 'https://picsum.photos/300/200', description: `Some description for second photo of listingId ${i}`}]
     };
     listings.push(db.insertListing(listing));
   }

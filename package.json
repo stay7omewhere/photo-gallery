@@ -1,17 +1,41 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "o2znz-photo-gallery",
+  "version": "1.0.0",
+  "description": "Photo gallery module of o2znz front-end capstone project",
+  "main": "index.js",
+  "author": "Angelique Nehmzow <angelique@nehmzow.com>",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "build": "webpack -w",
+    "start": "nodemon server/index.js",
+    "db": "node database/seed.js",
+    "test": "jest"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.6.3",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "aws-sdk": "^2.546.0",
+    "babel-loader": "^8.0.6",
+    "bluebird": "^3.7.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.7.4",
+    "nodemon": "^1.19.3",
+    "path": "^0.12.7",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   }
 }

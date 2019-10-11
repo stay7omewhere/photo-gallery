@@ -1,28 +1,48 @@
 import React from 'react';
 import $ from 'jquery';
+import Preview from './Preview';
+import Slideshow from './Slideshow';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       listingId: this.props.listingId,
-      photos: []
-    }
+      photos: [{url: '', description: ''}],
+      showSlideshow: false,
+      currentPhotoIndex: 0
+    };
+    this.viewPhotoHandler = this.viewPhotoHandler.bind(this);
+    this.closeSlideshow = this.closeSlideshow.bind(this);
   }
 
   render() {
     return (
       <div>
-        <img src={(this.state.photos[0]) ? this.state.photos[0].url : null}></img>
-        <div>{(this.state.photos[0]) && this.state.photos[0].description}</div>
+        {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} />}
+        {this.state.showSlideshow && <Slideshow photos={this.state.photos} currentPhotoIndex={this.state.currentPhotoIndex} viewPhotoHandler={this.viewPhotoHandler} closeSlideshow={this.closeSlideshow} />}
       </div>
-    )
+    );
   }
 
   componentDidMount() {
     $.get(`/photos/${this.state.listingId}`, null, (photos) => {
       this.setState({photos: photos});
     }, 'json');
+  }
+
+  viewPhotoHandler(photoIndex = 0) {
+    this.setState({
+      showSlideshow: true,
+      currentPhotoIndex: photoIndex
+    });
+  }
+
+  closeSlideshow() {
+    this.setState({
+      showSlideshow: false,
+      currentPhotoIndex: 0
+    });
   }
 
 }

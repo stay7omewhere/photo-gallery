@@ -20,10 +20,10 @@ var seedDb = function(maxRecords) {
     listings.push(db.insertListing({listingId: i, photos: photos}));
   }
   Promise.all(listings).then(function() {
-      console.log('All listings inserted into db! Disconnecting mongoose..');
-      mongoose.disconnect();
+    console.log('All listings inserted into db! Disconnecting mongoose..');
+    mongoose.disconnect();
   });
-}
+};
 
 // seed database with photos for 100 listings
 seedDb(100);

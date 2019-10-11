@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Slideshow({photos, currentPhotoIndex, viewPhotoHandler, closeSlideshow}) {
+var Slideshow = function({photos, currentPhotoIndex, viewPhotoHandler, closeSlideshow}) {
   var currentPhoto = photos[currentPhotoIndex];
   var previousPhotoIndex = (currentPhotoIndex === 0) ? photos.length - 1 : currentPhotoIndex - 1;
   var nextPhotoIndex = (currentPhotoIndex === photos.length - 1) ? 0 : currentPhotoIndex + 1;
@@ -14,6 +14,6 @@ function Slideshow({photos, currentPhotoIndex, viewPhotoHandler, closeSlideshow}
       <div>{currentPhoto.description}</div>
     </div>
   );
-}
+};
 
 export default Slideshow;

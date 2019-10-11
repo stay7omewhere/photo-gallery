@@ -26,12 +26,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    // get photos data from server (reads from db)
     $.get(`/photos/${this.state.listingId}`, null, (photos) => {
       this.setState({photos: photos});
     }, 'json');
   }
 
   viewPhotoHandler(photoIndex = 0) {
+    // render Slideshow component with specific photo 
     this.setState({
       showSlideshow: true,
       currentPhotoIndex: photoIndex
@@ -39,6 +41,7 @@ class App extends React.Component {
   }
 
   closeSlideshow() {
+    // reset to render Preview component
     this.setState({
       showSlideshow: false,
       currentPhotoIndex: 0

@@ -7,10 +7,10 @@ var Slideshow = function({photos, currentPhotoIndex, viewPhotoHandler, closeSlid
   var nextPhotoIndex = (currentPhotoIndex === photos.length - 1) ? 0 : currentPhotoIndex + 1;
   return (
     <div>
-      <button onClick={() => viewPhotoHandler(previousPhotoIndex)}>Previous</button>
+      <button id="previous-photo" onClick={() => viewPhotoHandler(previousPhotoIndex)}>Previous</button>
       <img src={currentPhoto.url} height="350" onClick={() => viewPhotoHandler(nextPhotoIndex)}></img>
-      <button onClick={() => viewPhotoHandler(nextPhotoIndex)}>Next</button>
-      <button onClick={closeSlideshow}>Close Slideshow</button>
+      <button id="next-photo" onClick={() => viewPhotoHandler(nextPhotoIndex)}>Next</button>
+      <button id="close-slideshow" onClick={closeSlideshow}>Close Slideshow</button>
       <div>{currentPhotoIndex + 1} / {photos.length}</div>
       <div>{currentPhoto.description}</div>
     </div>

@@ -14,6 +14,10 @@ describe('Preview component unit tests', () => {
       const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={0} viewPhotoHandler={() => {}} closeSlideshow={() => {}} />);
       expect(wrapper.exists()).toBe(true);
     });
+    test('it should display the correct order number per photo', () => {
+      const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={1} viewPhotoHandler={() => {}} closeSlideshow={() => {}} />);
+      expect(wrapper.find('#photo-order').text()).toBe('2 / 3');
+    });
   });
   describe('Interaction tests', () => {
     test('it should call the closeSlideshow fn when the close slideshow button is clicked', () => {

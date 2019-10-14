@@ -11,7 +11,7 @@ var Slideshow = function({photos, currentPhotoIndex, viewPhotoHandler, closeSlid
       <img src={currentPhoto.url} height="350" onClick={() => viewPhotoHandler(nextPhotoIndex)}></img>
       <button id="next-photo" onClick={() => viewPhotoHandler(nextPhotoIndex)}>Next</button>
       <button id="close-slideshow" onClick={closeSlideshow}>Close Slideshow</button>
-      <div>{currentPhotoIndex + 1} / {photos.length}</div>
+      <div id="photo-order">{currentPhotoIndex + 1} / {photos.length}</div>
       <div>{currentPhoto.description}</div>
     </div>
   );

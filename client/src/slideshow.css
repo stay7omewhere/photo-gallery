@@ -1,0 +1,12 @@
+.close {
+  cursor: pointer;
+  height: 88px;
+  width: 88px;
+}
+
+.previous {
+  cursor: pointer;
+}
+.next {
+  cursor: pointer;
+}

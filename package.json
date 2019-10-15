@@ -14,7 +14,9 @@
     "db": "node database/seed.js",
     "test": "jest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "identity-obj-proxy": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.3",
     "@babel/polyfill": "^7.6.0",

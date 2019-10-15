@@ -39,12 +39,6 @@ describe('Preview component unit tests', () => {
       wrapper.find('#next-photo').simulate('click');
       expect(mockClickHandler).toHaveBeenCalledWith(1);
     });
-    test('it should call the viewPhotoHandler fn with index 1 when the image is clicked for the first photo', () => {
-      var mockClickHandler = jest.fn();
-      const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={0} viewPhotoHandler={mockClickHandler} closeSlideshow={() => {}} />);
-      wrapper.find('#next-photo').simulate('click');
-      expect(mockClickHandler).toHaveBeenCalledWith(1);
-    });
     // testing click functionality when displaying middle image in slideshow
     test('it should call the viewPhotoHandler fn with index 0 when the previous button is clicked for the middle photo', () => {
       var mockClickHandler = jest.fn();
@@ -58,12 +52,6 @@ describe('Preview component unit tests', () => {
       wrapper.find('#next-photo').simulate('click');
       expect(mockClickHandler).toHaveBeenCalledWith(2);
     });
-    test('it should call the viewPhotoHandler fn with index 2 when the image is clicked for the middle photo', () => {
-      var mockClickHandler = jest.fn();
-      const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={1} viewPhotoHandler={mockClickHandler} closeSlideshow={() => {}} />);
-      wrapper.find('#next-photo').simulate('click');
-      expect(mockClickHandler).toHaveBeenCalledWith(2);
-    });
     // testing click functionality when displaying last image in slideshow
     test('it should call the viewPhotoHandler fn with index 1 when the previous button is clicked for the last photo', () => {
       var mockClickHandler = jest.fn();
@@ -72,12 +60,6 @@ describe('Preview component unit tests', () => {
       expect(mockClickHandler).toHaveBeenCalledWith(1);
     });
     test('it should call the viewPhotoHandler fn with index 0 when the next button is clicked for the last photo', () => {
-      var mockClickHandler = jest.fn();
-      const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={2} viewPhotoHandler={mockClickHandler} closeSlideshow={() => {}} />);
-      wrapper.find('#next-photo').simulate('click');
-      expect(mockClickHandler).toHaveBeenCalledWith(0);
-    });
-    test('it should call the viewPhotoHandler fn with index 0 when the image is clicked for the last photo', () => {
       var mockClickHandler = jest.fn();
       const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={2} viewPhotoHandler={mockClickHandler} closeSlideshow={() => {}} />);
       wrapper.find('#next-photo').simulate('click');

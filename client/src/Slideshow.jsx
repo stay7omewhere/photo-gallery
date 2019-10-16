@@ -18,17 +18,19 @@ var Slideshow = function({photos, currentPhotoIndex, viewPhotoHandler, closeSlid
         </svg>
       </button>
       <div className={styles.imgPanel}>
-        <button className={styles.previous} id="previous-photo" onClick={() => viewPhotoHandler(previousPhotoIndex)}>
-          <svg className={styles.arrow} viewBox="0 0 18 18">
-            <path fillRule="evenodd" d={previousButtonSvgPathDef}></path>
-          </svg>
-        </button>
-        <img className={styles.img} src={currentPhoto.url}></img>
-        <button className={styles.next} id="next-photo" onClick={() => viewPhotoHandler(nextPhotoIndex)}>
-          <svg className={styles.arrow} viewBox="0 0 18 18">
-            <path fillRule="evenodd" d={nextButtonSvgPathDef}></path>
-          </svg>
-        </button>
+        <div className={styles.imgPanelContainer}>
+          <button className={styles.direction} id="previous-photo" onClick={() => viewPhotoHandler(previousPhotoIndex)}>
+            <svg className={styles.arrow} viewBox="0 0 18 18">
+              <path fillRule="evenodd" d={previousButtonSvgPathDef}></path>
+            </svg>
+          </button>
+          <img className={styles.img} src={currentPhoto.url}></img>
+          <button className={styles.direction} id="next-photo" onClick={() => viewPhotoHandler(nextPhotoIndex)}>
+            <svg className={styles.arrow} viewBox="0 0 18 18">
+              <path fillRule="evenodd" d={nextButtonSvgPathDef}></path>
+            </svg>
+          </button>
+        </div>
       </div>
       <div className={styles.imgInfo}>
         <div id="photo-order">{currentPhotoIndex + 1} / {photos.length}</div>

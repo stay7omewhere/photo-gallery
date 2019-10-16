@@ -1,7 +1,7 @@
 .close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   height: 88px;
   width: 88px;
@@ -16,40 +16,33 @@
 }
 
 .imgPanel {
+  height: 65vh;
+  padding: 40px;
+}
+
+.imgPanelContainer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  flex-wrap: nowrap;
+  align-content: center;
 }
 
 .img {
+  position: absolute;
   cursor: pointer;
   border-radius: 16px;
-  height: 350px;
-  /* max-height: 55vh;
-  object-fit: cover;
-  z-index: 2;
-  position: absolute;
+  height: 55vh;
   max-width: 85%;
-  margin: 0px auto;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;   */
 }
 
 .imgInfo {
   background-color: white;
 }
 
-.previous {
+.direction {
   cursor: pointer;
-  /* border: 0px; */
-}
-
-.next {
-  cursor: pointer;
-  /* border: 0px; */
+  height: 55vh;
+  width: 50%;
+  border: 0px;
 }
 
 .arrow {

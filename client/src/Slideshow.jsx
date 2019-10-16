@@ -20,13 +20,13 @@ var Slideshow = function({photos, currentPhotoIndex, viewPhotoHandler, closeSlid
       <div className={styles.imgPanel}>
         <div className={styles.imgPanelContainer}>
           <button className={styles.direction} id="previous-photo" onClick={() => viewPhotoHandler(previousPhotoIndex)}>
-            <svg className={styles.arrow} viewBox="0 0 18 18">
+            <svg className={styles.previousArrow} viewBox="0 0 18 18">
               <path fillRule="evenodd" d={previousButtonSvgPathDef}></path>
             </svg>
           </button>
           <img className={styles.img} src={currentPhoto.url}></img>
           <button className={styles.direction} id="next-photo" onClick={() => viewPhotoHandler(nextPhotoIndex)}>
-            <svg className={styles.arrow} viewBox="0 0 18 18">
+            <svg className={styles.nextArrow} viewBox="0 0 18 18">
               <path fillRule="evenodd" d={nextButtonSvgPathDef}></path>
             </svg>
           </button>

@@ -29,6 +29,7 @@
 
 .img {
   position: absolute;
+  pointer-events: none;
   cursor: pointer;
   border-radius: 16px;
   height: 55vh;
@@ -47,8 +48,18 @@
   border: 0px;
 }
 
-.arrow {
+.previousArrow {
+  float: left;
   height: 24px;
   width: 24px;
+  margin: 0 auto 0 20px;
+  fill: rgb(72, 72, 72);
+}
+
+.nextArrow {
+  float: right;
+  height: 24px;
+  width: 24px;
+  margin: 0 20px 0 auto;
   fill: rgb(72, 72, 72);
 }

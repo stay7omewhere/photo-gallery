@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import Preview from './Preview';
 import Slideshow from './Slideshow';
+import styles from './app.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.app}>
         {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} />}
         {this.state.showSlideshow && <Slideshow photos={this.state.photos} currentPhotoIndex={this.state.currentPhotoIndex} viewPhotoHandler={this.viewPhotoHandler} closeSlideshow={this.closeSlideshow} />}
       </div>

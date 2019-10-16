@@ -14,7 +14,9 @@
     "db": "node database/seed.js",
     "test": "jest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "identity-obj-proxy": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.3",
     "@babel/polyfill": "^7.6.0",
@@ -23,6 +25,7 @@
     "aws-sdk": "^2.546.0",
     "babel-loader": "^8.0.6",
     "bluebird": "^3.7.0",
+    "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
@@ -35,6 +38,7 @@
     "path": "^0.12.7",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "style-loader": "^1.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   }

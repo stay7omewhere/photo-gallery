@@ -32,9 +32,12 @@ var Slideshow = function({photos, currentPhotoIndex, viewPhotoHandler, closeSlid
           </button>
         </div>
       </div>
-      <div className={styles.imgInfo}>
-        <div id="photo-order">{currentPhotoIndex + 1} / {photos.length}</div>
-        <div>{currentPhoto.description}</div>
+      <div>
+        <div className={styles.scrollbar}>SCROLLBAR PLACEHOLDER</div>
+        <div className={styles.imgText}>
+          <div className={styles.imgOrder} id="photo-order">{currentPhotoIndex + 1} / {photos.length}</div>
+          <div className={styles.imgDescription}>{currentPhoto.description}</div>
+        </div>
       </div>
     </div>
   );

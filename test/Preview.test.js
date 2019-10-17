@@ -2,7 +2,11 @@ import Preview from '../client/src/Preview.jsx';
 import React from 'react';
 import {shallow} from 'enzyme';
 
-var photos = [{url: 'www.aws.com/0', description: 'desc0'}, {url: 'www.aws.com/1', description: 'desc1'}];
+var photos = [
+  {url: 'www.aws.com/0', description: 'desc0'},
+  {url: 'www.aws.com/1', description: 'desc1'},
+  {url: 'www.aws.com/2', description: 'desc2'}
+];
 
 describe('Preview component unit tests', () => {
   describe('Render tests', () => {

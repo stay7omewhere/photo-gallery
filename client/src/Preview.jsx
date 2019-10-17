@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './preview.css';
 
 var Preview = function({photos, viewPhotoHandler}) {
+  var photoCount = photos.length;
   return (
+    photoCount > 1 &&
     <div className={styles.imgPanel}>
       <div className={styles.imgPanelContainer}>
         <div className={styles.primaryItem}>

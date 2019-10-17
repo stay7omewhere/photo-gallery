@@ -17,7 +17,7 @@
 }
 
 .imgPanel {
-  height: 65vh;
+  height: 55vh;
   padding: 40px;
 }
 
@@ -34,10 +34,6 @@
   border-radius: 16px;
   height: 55vh;
   max-width: 85%;
-}
-
-.imgInfo {
-  background-color: white;
 }
 
 .direction {
@@ -62,4 +58,30 @@
   width: 24px;
   margin: 0 20px 0 auto;
   fill: rgb(72, 72, 72);
+}
+
+.scrollbar {
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 64px;
+  color: white;
+  background-color: gray;
+}
+
+.imgText {
+  max-width: 80%;
+  margin: 15px auto 0;
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  line-height: 1.375em;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.imgOrder {
+  font-weight: 600;
+}
+
+.imgDescription {
+  margin: 15px auto 0;
+  font-weight: 400;
 }

@@ -10,6 +10,10 @@ var Preview = function({photos, viewPhotoHandler}) {
         <img className={styles.img} key={0} src={photos[0].url} onClick={() => viewPhotoHandler(0)}></img>
       </div>
       <div className={styles.secondaryImgsContainer}>
+        <div className={styles.listingActions}>
+          <button className={styles.shareListing}>Share</button>
+          <button className={styles.saveListing}>Save</button>
+        </div>
         <div className={styles.secondaryImg}>
           <img className={styles.img} key={1} src={photos[1].url} onClick={() => viewPhotoHandler(1)}></img>
         </div>

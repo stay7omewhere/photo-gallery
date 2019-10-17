@@ -1,0 +1,56 @@
+.imgPanel {
+  margin: 80px 0 0 0;
+  height: 47vh;
+}
+
+.imgPanelContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.primaryItem {
+  height: 47vh;
+  width: 67%;
+  overflow: hidden;
+  /* cursor: pointer;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid; */
+}
+
+.img {
+  max-width: 100%;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.secondaryItemsContainer {
+  height: 47vh;
+  max-height: 100%;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondaryItem {
+  height: 50%;
+  overflow: hidden;
+}
+
+.viewPhotos {
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+  outline: none;
+  color: #484848;
+  padding: 6px 15px;
+  font-family: sans-serif;
+  /* --font-button-small-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ; */
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
+  border-radius: 4px;
+  border-color: transparent;
+}

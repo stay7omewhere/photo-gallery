@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.app}>
-        {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} />}
+        {!this.state.showSlideshow && this.state.photos.length >= 2 && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} />}
         {this.state.showSlideshow && <Slideshow photos={this.state.photos} currentPhotoIndex={this.state.currentPhotoIndex} viewPhotoHandler={this.viewPhotoHandler} closeSlideshow={this.closeSlideshow} />}
       </div>
     );

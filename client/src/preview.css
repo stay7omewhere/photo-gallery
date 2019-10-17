@@ -1,52 +1,49 @@
-.imgPanel {
+.layoutContainer {
   margin: 80px 0 0 0;
   height: 47vh;
-}
-
-.imgPanelContainer {
   display: flex;
   align-items: flex-start;
 }
 
-.primaryItem {
+.primaryImg {
   height: 47vh;
   width: 67%;
   overflow: hidden;
-  /* cursor: pointer;
-  overflow: hidden;
-  border-width: 1px;
-  border-style: solid; */
+  outline: 1px solid rgb(72, 72, 72);
+  border-left: 1px solid rgb(72, 72, 72);
+  border-right: 1px solid rgb(72, 72, 72);
 }
 
 .img {
   max-width: 100%;
   cursor: pointer;
-  border-width: 1px;
-  border-style: solid;
 }
 
-.secondaryItemsContainer {
+.secondaryImgsContainer {
   height: 47vh;
-  max-height: 100%;
   width: 33%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-.secondaryItem {
+.secondaryImg {
   height: 50%;
   overflow: hidden;
+  outline: 1px solid rgb(72, 72, 72);
+  border-left: 1px solid rgb(72, 72, 72);
+  border-right: 1px solid rgb(72, 72, 72);
 }
 
 .viewPhotos {
   position: absolute;
   right: 24px;
+  bottom: 24px;
   cursor: pointer;
   outline: none;
   color: #484848;
   padding: 6px 15px;
-  font-family: sans-serif;
-  /* --font-button-small-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ; */
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   font-weight: 600;
   line-height: 22px;
   font-size: 14px;

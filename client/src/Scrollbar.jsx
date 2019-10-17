@@ -3,10 +3,10 @@ import styles from './scrollbar.css';
 
 var Scrollbar = function({photos, currentPhotoIndex, viewPhotoHandler}) {
   return (
-    <div>
+    <div className={styles.scrollbar}>
       {photos.map((photo, index) => {
         return (
-          <button key={index} disabled={index === currentPhotoIndex} onClick={() => viewPhotoHandler(index)}>
+          <button className={styles.thumbnail} key={index} disabled={index === currentPhotoIndex} onClick={() => viewPhotoHandler(index)}>
             <img className={styles.img} src={photo.url}></img>
           </button>
         );

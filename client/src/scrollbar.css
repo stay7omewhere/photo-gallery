@@ -1,3 +1,41 @@
-.img {
+.scrollbar {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail {
+  position: relative;
   height: 48px;
+  width: 48px;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0.7;
+  margin: 0px 0px 0px 8px;
+}
+
+.thumbnail:disabled {
+  cursor: default;
+  opacity: 1;
+  box-shadow: rgb(72, 72, 72) 0px 0px 0px 2px;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }

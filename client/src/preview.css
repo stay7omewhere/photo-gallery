@@ -17,6 +17,13 @@
 .img {
   max-width: 100%;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.img:hover {
+  transform: scale(1.05);
+  transition: transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .secondaryImgsContainer {

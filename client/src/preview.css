@@ -1,8 +1,59 @@
-.layoutContainer {
+.preview {
   margin: 80px 0 0 0;
   height: 47vh;
+  position: relative;
+}
+
+.listingActions {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 24px;
+}
+
+.shareListing {
+  margin-right: 18px;
+}
+
+.saveListing {
+  right: 0px;
+}
+
+.viewPhotos {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  bottom: 24px;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  color: #484848;
+  padding: 6px 15px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.photosContainer {
+  position: absolute;
   display: flex;
   align-items: flex-start;
+}
+
+.photosContainer:hover > * {
+  opacity: 0.7;
+  transition: opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.photosContainer:hover > *:hover {
+  opacity: 1;
+  transition: opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .primaryImg {
@@ -34,64 +85,20 @@
   position: relative;
 }
 
+.secondaryImgsContainer:hover > * {
+  opacity: 0.7;
+  transition: opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.secondaryImgsContainer:hover > *:hover {
+  opacity: 1;
+  transition: opacity 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
 .secondaryImg {
   height: 50%;
   overflow: hidden;
   outline: 1px solid rgb(72, 72, 72);
   border-left: 1px solid rgb(72, 72, 72);
   border-right: 1px solid rgb(72, 72, 72);
-}
-
-.listingActions {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 1;
-}
-
-.shareListing {
-  margin-right: 18px;
-  cursor: pointer;
-  outline: none;
-  color: #484848;
-  padding: 6px 15px;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  line-height: 22px;
-  font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
-  border-radius: 4px;
-  border-color: transparent;
-}
-
-.saveListing {
-  right: 0px;
-  cursor: pointer;
-  outline: none;
-  color: #484848;
-  padding: 6px 15px;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  line-height: 22px;
-  font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
-  border-radius: 4px;
-  border-color: transparent;
-}
-
-.viewPhotos {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  cursor: pointer;
-  outline: none;
-  color: #484848;
-  padding: 6px 15px;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  line-height: 22px;
-  font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
-  border-radius: 4px;
-  border-color: transparent;
 }

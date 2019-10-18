@@ -15,8 +15,30 @@
   margin-right: 18px;
 }
 
+.arrowBox {
+  height: 15px;
+  width: 15px;
+  margin-right: 12px;
+  fill-opacity: 0;
+  stroke: rgb(72, 72, 72);
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .saveListing {
   right: 0px;
+}
+
+.heart {
+  height: 15px;
+  width: 15px;
+  margin-right: 12px;
+  fill-opacity: 0;
+  stroke: rgb(72, 72, 72);
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .viewPhotos {

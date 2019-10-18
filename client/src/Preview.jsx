@@ -16,7 +16,7 @@ var Preview = function({photos, viewPhotoHandler, showShare, closePopup, showPop
         <div className={styles.listingActions}>
           <button className={cx(styles.button, styles.shareListing)} onClick={() => showPopup('showShare')}>
             <svg className={styles.arrowBox} viewBox="0 0 24 24">
-              <g fill-rule="evenodd">
+              <g fillRule="evenodd">
                 <path d={arrowStemSvgPathDef}></path>
                 <path d={arrowTipSvgPathDef}></path>
                 <path d={partialBoxSvgPathDef}></path>

@@ -127,12 +127,15 @@
 
 .popupBackground {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   background-color: black;
   opacity: 0.7;
   z-index: 2;
 }
 
-.shareModal {
+.sharePopup {
   margin: 64px 292px;
   width: 376px;
   height: 764px;

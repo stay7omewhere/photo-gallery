@@ -1,4 +1,5 @@
 import Slideshow from '../client/src/Slideshow.jsx';
+import Scrollbar from '../client/src/Scrollbar.jsx';
 import React from 'react';
 import {shallow} from 'enzyme';
 
@@ -17,6 +18,10 @@ describe('Preview component unit tests', () => {
     test('it should display the correct order number per photo', () => {
       const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={1} viewPhotoHandler={() => {}} closeSlideshow={() => {}} />);
       expect(wrapper.find('#photo-order').text()).toBe('2 / 3');
+    });
+    test('it should render a scrollbar', () => {
+      const wrapper = shallow(<Slideshow photos={photos} currentPhotoIndex={0} viewPhotoHandler={() => {}} closeSlideshow={() => {}} />);
+      expect(wrapper.find(Scrollbar).exists()).toBe(true);
     });
   });
   describe('Interaction tests', () => {

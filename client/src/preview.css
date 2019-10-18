@@ -124,3 +124,18 @@
   border-left: 1px solid rgb(72, 72, 72);
   border-right: 1px solid rgb(72, 72, 72);
 }
+
+.popupBackground {
+  position: absolute;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.shareModal {
+  margin: 64px 292px;
+  width: 376px;
+  height: 764px;
+  background-color: white;
+  z-index: 3;
+}

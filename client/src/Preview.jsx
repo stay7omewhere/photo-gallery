@@ -45,8 +45,7 @@ var Preview = function({photos, viewPhotoHandler, showShare, closePopup, showPop
         </div>
       </div>
       {showShare &&
-        <div className={styles.shareWindow}>
-          <div className={styles.popupBackground}>Test</div>
+        <div className={styles.shareContainer} onClick={closePopup}>
           <div className={styles.sharePopup}>
             <button onClick={closePopup}>X</button>Share
           </div>

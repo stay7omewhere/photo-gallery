@@ -11,7 +11,9 @@ var Share = function({closePopup}) {
         <div className={styles.shareMethods}>
           {shareMethods.map(method => {
             return (
-              <div>{method}</div>
+              <div className={styles.methodContainer}>
+                <div className={styles.method}>{method}</div>
+              </div>
             );
           })}
         </div>

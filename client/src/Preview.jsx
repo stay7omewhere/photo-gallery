@@ -45,7 +45,7 @@ var Preview = function({photos, viewPhotoHandler, showShare, closePopup, showPop
           </div>
         </div>
       </div>
-      {showShare && <Share closePopu={closePopup} />}
+      {showShare && <Share closePopup={closePopup} />}
     </div>
   );
 };

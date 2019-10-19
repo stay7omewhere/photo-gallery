@@ -1,4 +1,5 @@
 import React from 'react';
+import Share from './Share.jsx';
 import styles from './preview.css';
 import cx from 'classnames';
 
@@ -44,12 +45,7 @@ var Preview = function({photos, viewPhotoHandler, showShare, closePopup, showPop
           </div>
         </div>
       </div>
-      {showShare &&
-        <div className={styles.shareContainer} onClick={closePopup}>
-          <div className={styles.sharePopup}>
-            <button onClick={closePopup}>X</button>Share
-          </div>
-        </div>}
+      {showShare && <Share closePopu={closePopup} />}
     </div>
   );
 };

@@ -56,6 +56,7 @@ var shareMethods = [
 var Share = function({closePopup}) {
   return (
     <div className={styles.shareContainer}>
+      <div className={styles.shareBackground} onClick={closePopup}></div>
       <div className={styles.sharePopup}>
         <div className={styles.close}>
           <button className={styles.closeButton} onClick={closePopup}>

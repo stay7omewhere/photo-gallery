@@ -1,6 +1,19 @@
 .shareContainer {
   position: fixed;
   overflow-y: auto;
+  background: transparent;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.shareBackground {
+  position: fixed;
   background: rgba(0, 0, 0, 0.75);
   top: 0px;
   left: 0px;
@@ -8,8 +21,6 @@
   bottom: 0px;
   z-index: 2;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
 }
 
 .sharePopup {

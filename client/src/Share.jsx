@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './share.css';
 
+var closeXSvgPathDef = 'm23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22';
 var shareMethods = [
   {
     name: 'Facebook',
@@ -48,8 +49,12 @@ var Share = function({closePopup}) {
   return (
     <div className={styles.shareContainer} onClick={closePopup}>
       <div className={styles.sharePopup}>
-        <button onClick={closePopup}>X</button>
-        <div>Share</div>
+        <div className={styles.close}>
+          <button className={styles.closeButton} onClick={closePopup}>
+            <svg className={styles.closeX} viewBox="0 0 24 24"><path d={closeXSvgPathDef}></path></svg>
+          </button>
+        </div>
+        <div className={styles.shareText}>Share</div>
         <div className={styles.shareMethods}>
           {shareMethods.map(method => {
             return (

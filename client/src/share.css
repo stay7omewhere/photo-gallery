@@ -21,6 +21,41 @@
   z-index: 3;
 }
 
+.close {
+  width: 312px;
+  height: 21px;
+  margin: 32px 32px 24px 32px;
+}
+
+.closeButton {
+  width: 16px;
+  height: 16px;
+  outline: none;
+  cursor: pointer;
+  border: 0px;
+  padding: 0px;
+}
+
+.closeX {
+  width: 16px;
+  height: 16px;
+  fill: rgb(118, 118, 118);
+  fill-rule: evenodd;
+}
+
+.shareText {
+  width: 312px;
+  height: 30px;
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25em;
+  color: rgb(72, 72, 72);
+}
+
 .shareMethods {
   display: flex;
   flex-direction: column;
@@ -28,13 +63,13 @@
 }
 
 .methodContainer {
-  height: 76px;
   width: 312px;
+  height: 76px;
 }
 
 .method {
-  height: 26px;
   width: 312px;
+  height: 26px;
   padding-top: 24px;
   padding-bottom: 24px;
   border-top: 1px solid rgb(235, 235, 235);
@@ -46,8 +81,8 @@
 }
 
 .icon {
-  height: 18px;
   width: 18px;
+  height: 18px;
   fill: rgb(72, 72, 72);
   fill-rule: evenodd;
   margin-right: 8px;

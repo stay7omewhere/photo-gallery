@@ -39,8 +39,15 @@
   padding-bottom: 24px;
   border-top: 1px solid rgb(235, 235, 235);
   border-bottom: 1px solid rgb(235, 235, 235);
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 600px;
   color: #008489;
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+  fill: rgb(72, 72, 72);
+  fill-rule: evenodd;
 }

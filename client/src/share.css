@@ -74,6 +74,13 @@
   padding-bottom: 24px;
   border-top: 1px solid rgb(235, 235, 235);
   border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.methodButton {
+  outline: none;
+  cursor: pointer;
+  border: 0px;
+  padding: 0px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 600px;

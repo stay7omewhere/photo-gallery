@@ -11,17 +11,19 @@ class App extends React.Component {
       listingId: this.props.listingId,
       photos: [{url: '', description: ''}],
       showSlideshow: false,
+      showShare: false,
       currentPhotoIndex: 0
     };
     this.viewPhotoHandler = this.viewPhotoHandler.bind(this);
-    this.closeSlideshow = this.closeSlideshow.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.showPopup = this.showPopup.bind(this);
   }
 
   render() {
     return (
       <div className={styles.app}>
-        {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} />}
-        {this.state.showSlideshow && <Slideshow photos={this.state.photos} currentPhotoIndex={this.state.currentPhotoIndex} viewPhotoHandler={this.viewPhotoHandler} closeSlideshow={this.closeSlideshow} />}
+        {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} showShare={this.state.showShare} closePopup={this.closeModal} showPopup={this.showPopup} />}
+        {this.state.showSlideshow && <Slideshow photos={this.state.photos} currentPhotoIndex={this.state.currentPhotoIndex} viewPhotoHandler={this.viewPhotoHandler} closeSlideshow={this.closeModal} />}
       </div>
     );
   }
@@ -41,12 +43,19 @@ class App extends React.Component {
     });
   }
 
-  closeSlideshow() {
+  closeModal() {
     // reset to render Preview component
     this.setState({
       showSlideshow: false,
+      showShare: false,
       currentPhotoIndex: 0
     });
+  }
+
+  showPopup(showPopup) {
+    var newState = {};
+    newState[showPopup] = true;
+    this.setState(newState);
   }
 
 }

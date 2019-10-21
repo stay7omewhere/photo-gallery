@@ -1,4 +1,4 @@
-import Preview from '../client/src/Preview.jsx';
+import Preview from '../client/src/components/Preview.jsx';
 import React from 'react';
 import {shallow} from 'enzyme';
 

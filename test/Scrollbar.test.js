@@ -1,4 +1,4 @@
-import Scrollbar from '../client/src/Scrollbar.jsx';
+import Scrollbar from '../client/src/components/Scrollbar.jsx';
 import React from 'react';
 import {shallow} from 'enzyme';
 

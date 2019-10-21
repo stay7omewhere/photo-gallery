@@ -1,5 +1,5 @@
-import Slideshow from '../client/src/Slideshow.jsx';
-import Scrollbar from '../client/src/Scrollbar.jsx';
+import Slideshow from '../client/src/components/Slideshow.jsx';
+import Scrollbar from '../client/src/components/Scrollbar.jsx';
 import React from 'react';
 import {shallow} from 'enzyme';
 

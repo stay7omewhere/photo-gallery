@@ -1,6 +1,6 @@
-import App from '../client/src/App.jsx';
-import Preview from '../client/src/Preview.jsx';
-import Slideshow from '../client/src/Slideshow.jsx';
+import App from '../client/src/components/App.jsx';
+import Preview from '../client/src/components/Preview.jsx';
+import Slideshow from '../client/src/components/Slideshow.jsx';
 import React from 'react';
 import {shallow} from 'enzyme';
 

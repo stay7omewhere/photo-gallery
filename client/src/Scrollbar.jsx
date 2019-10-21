@@ -29,7 +29,7 @@ var Thumbnail = styled.button`
   :hover {
     opacity: 1;
   }
-  `;
+`;
 
 var Img = styled.img`
   position: absolute;

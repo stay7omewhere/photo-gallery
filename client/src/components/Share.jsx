@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './share.css';
+import {ShareContainer, ShareBackground, SharePopup, Close, CloseButton, CloseX, ShareText, ShareMethods, MethodContainer, Method, MethodButton, Icon} from '../styled_components/share.js';
 
 var closeXSvgPathDef = 'm23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22';
 var shareMethods = [
@@ -55,33 +55,33 @@ var shareMethods = [
 
 var Share = function({closePopup}) {
   return (
-    <div className={styles.shareContainer}>
-      <div className={styles.shareBackground} onClick={closePopup}></div>
-      <div className={styles.sharePopup}>
-        <div className={styles.close}>
-          <button className={styles.closeButton} onClick={closePopup}>
-            <svg className={styles.closeX} viewBox="0 0 24 24"><path d={closeXSvgPathDef}></path></svg>
-          </button>
-        </div>
-        <div className={styles.shareText}>Share</div>
-        <div className={styles.shareMethods}>
+    <ShareContainer>
+      <ShareBackground onClick={closePopup}></ShareBackground>
+      <SharePopup>
+        <Close>
+          <CloseButton onClick={closePopup}>
+            <CloseX viewBox="0 0 24 24"><path d={closeXSvgPathDef}></path></CloseX>
+          </CloseButton>
+        </Close>
+        <ShareText>Share</ShareText>
+        <ShareMethods>
           {shareMethods.map(method => {
             return (
-              <div key={method.name} className={styles.methodContainer}>
-                <div className={styles.method}>
-                  <button className={styles.methodButton} onClick={() => window.open(method.url)}>
-                    <svg className={styles.icon} viewBox={method.viewBox}> 
+              <MethodContainer key={method.name}>
+                <Method>
+                  <MethodButton onClick={() => window.open(method.url)}>
+                    <Icon viewBox={method.viewBox}> 
                       <path d={method.path}></path>
-                    </svg>
+                    </Icon>
                     <span>{method.name}</span>
-                  </button>
-                </div>
-              </div>
+                  </MethodButton>
+                </Method>
+              </MethodContainer>
             );
           })}
-        </div>
-      </div>
-    </div>
+        </ShareMethods>
+      </SharePopup>
+    </ShareContainer>
   );
 };
 

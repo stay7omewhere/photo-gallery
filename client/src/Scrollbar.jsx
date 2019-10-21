@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from './scrollbar.css';
 import styled from 'styled-components';
 
-var Scrollbar = styled.div`
+var ScrollbarDiv = styled.div`
   height: 100%;
   margin: auto;
   display: flex;
@@ -43,14 +42,13 @@ var Img = styled.img`
 
 var Scrollbar = function({photos, currentPhotoIndex, viewPhotoHandler}) {
   return (
-    <div className={styles.scrollbar}>
+    <ScrollbarDiv>
       {photos.map((photo, index) => (
         <Thumbnail key={index} disabled={index === currentPhotoIndex} onClick={() => viewPhotoHandler(index)}>
           <Img src={photo.url} />
         </Thumbnail>
-      )
-      )}
-    </div>
+      ))}
+    </ScrollbarDiv>
   );
 };
 

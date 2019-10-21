@@ -65,6 +65,7 @@ var ViewPhotos = styled(Button)`
   right: 24px;
   bottom: 24px;
 `;
+ViewPhotos.displayName = 'ViewPhotos';
 
 var PhotosContainer = styled.div`
   position: absolute;
@@ -99,6 +100,7 @@ var Img = styled.img`
     transition: transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 `;
+Img.displayName = 'image';
 
 var SecondaryImgsContainer = styled.div`
   height: 47vh;

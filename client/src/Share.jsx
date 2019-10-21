@@ -1,5 +1,113 @@
 import React from 'react';
-import styles from './share.css';
+import styled from 'styled-components';
+
+var ShareContainer = styled.div`
+  position: fixed;
+  overflow-y: auto;
+  background: transparent;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+`;
+
+var ShareBackground = styled.div`
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  min-height: 100vh;
+`;
+
+var SharePopup = styled.div`
+  width: 376px;
+  height: 764px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  background-color: white;
+  z-index: 3;
+`;
+
+var Close = styled.div`
+  width: 312px;
+  height: 21px;
+  margin: 32px 32px 24px 32px;
+`;
+
+var CloseButton = styled.button`
+  width: 16px;
+  height: 16px;
+  outline: none;
+  cursor: pointer;
+  border: 0px;
+  padding: 0px;
+`;
+
+var CloseX = styled.svg`
+  width: 16px;
+  height: 16px;
+  fill: rgb(118, 118, 118);
+  fill-rule: evenodd;
+`;
+
+var ShareText = styled.div`
+  width: 312px;
+  height: 30px;
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25em;
+  color: rgb(72, 72, 72);
+`;
+
+var ShareMethods = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+var MethodContainer = styled.div`
+  width: 312px;
+  height: 76px;
+`;
+
+var Method = styled.div`
+  width: 312px;
+  height: 26px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
+`;
+
+var MethodButton = styled.button`
+  outline: none;
+  cursor: pointer;
+  border: 0px;
+  padding: 0px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600px;
+  color: #008489;
+`;
+
+var Icon = styled.svg`
+  width: 18px;
+  height: 18px;
+  fill: rgb(72, 72, 72);
+  fill-rule: evenodd;
+  margin-right: 8px;
+`;
 
 var closeXSvgPathDef = 'm23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22';
 var shareMethods = [
@@ -55,33 +163,33 @@ var shareMethods = [
 
 var Share = function({closePopup}) {
   return (
-    <div className={styles.shareContainer}>
-      <div className={styles.shareBackground} onClick={closePopup}></div>
-      <div className={styles.sharePopup}>
-        <div className={styles.close}>
-          <button className={styles.closeButton} onClick={closePopup}>
-            <svg className={styles.closeX} viewBox="0 0 24 24"><path d={closeXSvgPathDef}></path></svg>
-          </button>
-        </div>
-        <div className={styles.shareText}>Share</div>
-        <div className={styles.shareMethods}>
+    <ShareContainer>
+      <ShareBackground onClick={closePopup}></ShareBackground>
+      <SharePopup>
+        <Close>
+          <CloseButton onClick={closePopup}>
+            <CloseX viewBox="0 0 24 24"><path d={closeXSvgPathDef}></path></CloseX>
+          </CloseButton>
+        </Close>
+        <ShareText>Share</ShareText>
+        <ShareMethods>
           {shareMethods.map(method => {
             return (
-              <div key={method.name} className={styles.methodContainer}>
-                <div className={styles.method}>
-                  <button className={styles.methodButton} onClick={() => window.open(method.url)}>
-                    <svg className={styles.icon} viewBox={method.viewBox}> 
+              <MethodContainer key={method.name}>
+                <Method>
+                  <MethodButton onClick={() => window.open(method.url)}>
+                    <Icon viewBox={method.viewBox}> 
                       <path d={method.path}></path>
-                    </svg>
+                    </Icon>
                     <span>{method.name}</span>
-                  </button>
-                </div>
-              </div>
+                  </MethodButton>
+                </Method>
+              </MethodContainer>
             );
           })}
-        </div>
-      </div>
-    </div>
+        </ShareMethods>
+      </SharePopup>
+    </ShareContainer>
   );
 };
 

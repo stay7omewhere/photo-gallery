@@ -2,17 +2,16 @@ const express = require('express');
 const app = express();
 const port = 3001;
 const db = require('../database/index.js');
-var cors = {
-  'access-control-allow-origin': '*',
-  'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'access-control-allow-headers': 'content-type, accept',
-  'access-control-max-age': 10
-};
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 app.use('/:listingid', express.static('public'));
 
 app.get('/:listingid', (req, res) => {
-  res.set(cors).end();
+  res.end();
 });
 
 app.get('/photos/:listingid', (req, res) => {
@@ -20,11 +19,11 @@ app.get('/photos/:listingid', (req, res) => {
     .then((data) => {
       var listing = data[0];
       console.log('Photos retrieved: ', listing.photos);
-      res.set(cors).send(listing.photos);
+      res.send(listing.photos);
     })
     .catch((err) => {
       console.log('Error retrieving photos: ', err);
-      res.set(cors).end();
+      res.end();
     });
 });
 

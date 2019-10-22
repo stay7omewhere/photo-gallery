@@ -9,10 +9,10 @@ var cors = {
   'access-control-max-age': 10
 };
 
-app.use(express.static('public'));
+app.use('/:listingid', express.static('public'));
 
-app.get('/', (req, res) => {
-  res.end();
+app.get('/:listingid', (req, res) => {
+  res.set(cors).end();
 });
 
 app.get('/photos/:listingid', (req, res) => {

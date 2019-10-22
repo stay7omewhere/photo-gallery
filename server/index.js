@@ -3,9 +3,14 @@ const app = express();
 const port = 3001;
 const db = require('../database/index.js');
 
-app.use(express.static('public'));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+app.use('/:listingid', express.static('public'));
 
-app.get('/', (req, res) => {
+app.get('/:listingid', (req, res) => {
   res.end();
 });
 

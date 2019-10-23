@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+const styled = window.styled;
 
 var ScrollbarDiv = styled.div`
   height: 100%;

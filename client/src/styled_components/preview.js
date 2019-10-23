@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+const styled = window.styled;
 
 var PreviewDiv = styled.div`
   margin: 80px 0 0 0;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+const styled = window.styled;
 
 var Close = styled.button`
   position: absolute;

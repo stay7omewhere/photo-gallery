@@ -12,7 +12,8 @@
     "build": "webpack",
     "start": "node server/index.js",
     "db": "node database/seed.js",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "npm run build & npm run db & npm run start"
   },
   "dependencies": {
     "classnames": "^2.2.6",

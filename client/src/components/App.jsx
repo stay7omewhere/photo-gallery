@@ -7,7 +7,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: this.props.url,
       listingId: this.props.listingId,
       photos: [{url: '', description: ''}],
       showSlideshow: false,

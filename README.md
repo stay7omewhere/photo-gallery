@@ -1,13 +1,37 @@
-# Project Name
+# Photo Gallery Service
 
-> Project description
+> An app to render a photo gallery for a website's item listing page. It includes a seed script to generate example data.
+
+Features include:
+  - A preview of the first few photos in the set
+    - arranged in a grid
+    - with an on-hover effect that zooms into the photo, and darkens all other photos
+    - clicking on a photo brings the user to that point in the carousel
+    - clicking on the 'View Photos' button brings the user to the first photo in the carousel
+    - clicking the 'Share' button renders a modal that covers the rest of the page, clicking on the 'X' closes it
+  - A carousel to navigate through the photos
+    - clicking on either side of the photo, or the arrow buttons, navigates the user in a loop forwards/backwards through the set
+    - clicking the 'X' button closes the carousel and re-renders the preview
+    - a description and order number are displayed at the bottom of the photo
+    - a 'scrollbar' shows thumbnails (that highlight on hover) of photos in the set, and the user can click on one to navigate directly to that photo
+
+Screenshots of deployed service:
+Preview
+<img width="826" alt="screenshot1" src="https://user-images.githubusercontent.com/10113718/67626689-d2fe9200-f803-11e9-8e13-af8db45b8bd6.png">
+
+Photo carousel
+<img width="827" alt="screenshot2" src="https://user-images.githubusercontent.com/10113718/67626699-f4f81480-f803-11e9-87c9-bb299c1b6a15.png">
+
+Share modal
+<img width="827" alt="screenshot3" src="https://user-images.githubusercontent.com/10113718/67626705-13f6a680-f804-11e9-8763-c5d3a66a9b9f.png">
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/O2znz/checkout
+  - https://github.com/O2znz/reviews
+  - https://github.com/O2znz/recommendations
+  - https://github.com/O2znz/experiences
+  - https://github.com/O2znz/angelique-proxy (proxy server that renders this service and the services listed above)
 
 ## Table of Contents
 
@@ -17,14 +41,12 @@
 
 ## Usage
 
-> Some usage instructions
+To deploy this service, run a copy of the docker-compose.yml included in the root directory (updating the port mapping as needed). This will pull the image for this app (built from the Dockerfile in the root directory) from Docker Hub, and create a container that runs the server. Once the service is running, open `<URL>/:id` in the browser, changing the id (0-99) to access a variety of examples (for now, URL is hardcoded to `http://3.133.19.147`).
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
+- Node 8.15.1
+- Mongo 4.2.0
 
 ## Development
 

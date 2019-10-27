@@ -1,5 +1,16 @@
 const styled = window.styled;
 
+var SlideshowContainer = styled.div`
+  position: fixed;
+  overflow-y: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  display: block;
+`;
+
 var Close = styled.button`
   position: absolute;
   top: 10px;
@@ -26,11 +37,11 @@ var ImgPanel = styled.div`
 var ImgPanelContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 `;
 
 var Img = styled.img`
-  position: absolute;
+  position: fixed;
   pointer-events: none;
   cursor: pointer;
   border-radius: 16px;
@@ -86,4 +97,4 @@ var ImgDescription = styled.div`
   font-weight: 200;
 `;
 
-export {Close, CloseX, ImgPanel, ImgPanelContainer, Img, Direction, PreviousArrow, NextArrow, ScrollbarDiv, ImgText, ImgOrder, ImgDescription};
+export {SlideshowContainer, Close, CloseX, ImgPanel, ImgPanelContainer, Img, Direction, PreviousArrow, NextArrow, ScrollbarDiv, ImgText, ImgOrder, ImgDescription};

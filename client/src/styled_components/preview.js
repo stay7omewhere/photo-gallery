@@ -78,7 +78,7 @@ var PhotosContainer = styled.div`
     filter: brightness(100%);
     transition: filter 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
-  `;
+`;
 
 var PrimaryImg = styled.div`
   height: 47vh;

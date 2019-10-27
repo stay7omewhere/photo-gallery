@@ -9,6 +9,7 @@ Features include:
     - clicking on a photo brings the user to that point in the carousel
     - clicking on the 'View Photos' button brings the user to the first photo in the carousel
     - clicking the 'Share' button renders a modal that covers the rest of the page, clicking on the 'X' closes it
+    - clicking the 'Save' button toggles between a saved (filled heart) and unsaved (empty heart) state
   - A carousel to navigate through the photos
     - clicking on either side of the photo, or the arrow buttons, navigates the user in a loop forwards/backwards through the set
     - clicking the 'X' button closes the carousel and re-renders the preview
@@ -25,6 +26,10 @@ Photo carousel
 
 Share modal
 <img width="827" alt="screenshot3" src="https://user-images.githubusercontent.com/10113718/67626705-13f6a680-f804-11e9-8763-c5d3a66a9b9f.png">
+
+Save button when clicked
+
+<img width="281" alt="screenshot4" src="https://user-images.githubusercontent.com/10113718/67631024-e9c9d680-f84d-11e9-80c6-9f676083bf07.png">
 
 Photos in this project are from the following Airbnb listings:
 

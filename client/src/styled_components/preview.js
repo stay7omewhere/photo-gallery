@@ -107,6 +107,7 @@ var SecondaryImgsContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  outline: 1px solid rgb(72, 72, 72);
   :hover > * {
     filter: brightness(70%);
     transition: filter 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
@@ -120,7 +121,7 @@ var SecondaryImgsContainer = styled.div`
 var SecondaryImg = styled.div`
   height: 50%;
   overflow: hidden;
-  outline: 1px solid rgb(72, 72, 72);
+  border-top: 1px solid rgb(72, 72, 72);
   border-left: 1px solid rgb(72, 72, 72);
   border-right: 1px solid rgb(72, 72, 72);
 `;

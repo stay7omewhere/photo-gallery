@@ -28,11 +28,11 @@ Share modal
 
 Photos in this project are from the following Airbnb listings:
 
-https://www.airbnb.com/rooms/10201545
-https://www.airbnb.com/rooms/3993887
-https://www.airbnb.com/rooms/32694
-https://www.airbnb.com/rooms/1083329
-https://www.airbnb.com/rooms/1415908
+  - https://www.airbnb.com/rooms/10201545
+  - https://www.airbnb.com/rooms/3993887
+  - https://www.airbnb.com/rooms/32694
+  - https://www.airbnb.com/rooms/1083329
+  - https://www.airbnb.com/rooms/1415908
 
 ## Related Projects
 

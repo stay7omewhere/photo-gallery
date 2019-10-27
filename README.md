@@ -16,6 +16,7 @@ Features include:
     - a 'scrollbar' shows thumbnails (that highlight on hover) of photos in the set, and the user can click on one to navigate directly to that photo
 
 Screenshots of deployed service:
+
 Preview
 <img width="826" alt="screenshot1" src="https://user-images.githubusercontent.com/10113718/67626689-d2fe9200-f803-11e9-8e13-af8db45b8bd6.png">
 
@@ -24,6 +25,14 @@ Photo carousel
 
 Share modal
 <img width="827" alt="screenshot3" src="https://user-images.githubusercontent.com/10113718/67626705-13f6a680-f804-11e9-8763-c5d3a66a9b9f.png">
+
+Photos in this project are from the following Airbnb listings:
+
+https://www.airbnb.com/rooms/10201545
+https://www.airbnb.com/rooms/3993887
+https://www.airbnb.com/rooms/32694
+https://www.airbnb.com/rooms/1083329
+https://www.airbnb.com/rooms/1415908
 
 ## Related Projects
 

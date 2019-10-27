@@ -10,7 +10,7 @@ Features include:
     - clicking on the 'View Photos' button brings the user to the first photo in the carousel
     - clicking the 'Share' button renders a modal that covers the rest of the page, clicking on the 'X' closes it
     - clicking the 'Save' button toggles between a saved (filled heart) and unsaved (empty heart) state
-- A carousel to navigate through the photos
+  - A carousel to navigate through the photos
     - clicking on either side of the photo, or the arrow buttons, navigates the user in a loop forwards/backwards through the set
     - clicking the 'X' button closes the carousel and re-renders the preview
     - a description and order number are displayed at the bottom of the photo

@@ -2,7 +2,7 @@ version: '3'
 
 services:
   module:
-    image: angeliquemari/o2znz-photo-gallery:v1.3
+    image: angeliquemari/o2znz-photo-gallery:v1.4
     depends_on:
       - 'database'
     ports:

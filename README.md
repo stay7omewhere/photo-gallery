@@ -2,6 +2,36 @@
 
 > An app to render a photo gallery for a website's item listing page. It includes a seed script to generate example data.
 
+## Table of Contents
+
+1. [Usage](#usage)
+1. [Requirements](#requirements)
+1. [Development](#development)
+1. [Features](#features)
+1. [Related Projects](#related-projects)
+
+## Usage
+
+To deploy this service, run a copy of the docker-compose.yml included in the root directory (updating the port mapping as needed). This will pull the image for this app (built from the Dockerfile in the root directory) from Docker Hub, and create a container that runs the server. Once the service is running, open `<URL>/:id` in the browser, changing the id (0-99) to access a variety of examples (for now, URL is hardcoded to `http://3.133.19.147`).
+
+## Requirements
+
+- Node 8.15.1
+- Mongo 4.2.0
+
+## Development
+
+### Installing Dependencies
+
+From within the root directory:
+
+```sh
+npm install -g webpack
+npm install
+```
+
+## Features
+
 Features include:
   - A preview of the first few photos in the set
     - arranged in a grid
@@ -46,30 +76,3 @@ Photos in this project are from the following Airbnb listings:
   - https://github.com/O2znz/recommendations
   - https://github.com/O2znz/experiences
   - https://github.com/O2znz/angelique-proxy (proxy server that renders this service and the services listed above)
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-To deploy this service, run a copy of the docker-compose.yml included in the root directory (updating the port mapping as needed). This will pull the image for this app (built from the Dockerfile in the root directory) from Docker Hub, and create a container that runs the server. Once the service is running, open `<URL>/:id` in the browser, changing the id (0-99) to access a variety of examples (for now, URL is hardcoded to `http://3.133.19.147`).
-
-## Requirements
-
-- Node 8.15.1
-- Mongo 4.2.0
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
-

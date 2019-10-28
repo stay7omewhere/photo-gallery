@@ -11,17 +11,19 @@ class App extends React.Component {
       photos: [{url: '', description: ''}],
       showSlideshow: false,
       showShare: false,
-      currentPhotoIndex: 0
+      currentPhotoIndex: 0,
+      saved: false
     };
     this.viewPhotoHandler = this.viewPhotoHandler.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.showPopup = this.showPopup.bind(this);
+    this.saveListing = this.saveListing.bind(this);
   }
 
   render() {
     return (
       <div>
-        {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} showShare={this.state.showShare} closePopup={this.closeModal} showPopup={this.showPopup} />}
+        {!this.state.showSlideshow && <Preview photos={this.state.photos} viewPhotoHandler={this.viewPhotoHandler} showShare={this.state.showShare} closePopup={this.closeModal} showPopup={this.showPopup} saved={this.state.saved} saveListing={this.saveListing} />}
         {this.state.showSlideshow && <Slideshow photos={this.state.photos} currentPhotoIndex={this.state.currentPhotoIndex} viewPhotoHandler={this.viewPhotoHandler} closeSlideshow={this.closeModal} />}
       </div>
     );
@@ -55,6 +57,10 @@ class App extends React.Component {
     var newState = {};
     newState[showPopup] = true;
     this.setState(newState);
+  }
+
+  saveListing() {
+    this.setState({saved: !this.state.saved});
   }
 
 }

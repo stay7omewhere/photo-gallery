@@ -19,6 +19,27 @@ To deploy this service, run a copy of the docker-compose.yml included in the roo
 - Node 8.15.1
 - Mongo 4.2.0
 
+## API routes
+
+### GET
+```
+/api/rooms/:id/photos/
+```
+Renders photos of a specific listing.
+
+### POST
+```
+/api/rooms/:id/save
+/api/rooms/:id/share
+```
+Each route respectivaly saves and shares specific listing to the database.
+
+### DELETE
+```
+/api/rooms/:id/save
+```
+Remove a saved listing to be unsaved.
+
 ## Development
 
 ### Installing Dependencies

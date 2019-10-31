@@ -21,6 +21,13 @@ To deploy this service, run a copy of the docker-compose.yml included in the roo
 
 ## API routes
 
+### USE
+```
+/
+/rooms/:id
+```
+Serves up static files.
+
 ### GET
 ```
 /api/rooms/:id/photos/

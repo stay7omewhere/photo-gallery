@@ -14,6 +14,6 @@ CREATE TABLE IF NOT EXISTS listings (
   id uuid,
   saved Boolean,
   shared Boolean,
-  photos list,
+  photos list<text>,
   PRIMARY KEY (id)
 );

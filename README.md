@@ -23,7 +23,6 @@ To deploy this service, run a copy of the docker-compose.yml included in the roo
 
 ### USE
 ```
-/
 /rooms/:id
 ```
 Serves up static files.
@@ -33,6 +32,13 @@ Serves up static files.
 /api/rooms/:id/photos/
 ```
 Renders photos of a specific listing.
+* Returns a JSON object containing data of the form:
+```
+{
+  listingId: Num,
+  photos: Array
+}
+```
 
 ### POST
 ```
@@ -40,12 +46,31 @@ Renders photos of a specific listing.
 /api/rooms/:id/share
 ```
 Each route respectivaly saves and shares specific listing to the database.
+* Saves a JSON object to the database in the form:
+```
+{
+  listingId: Num,
+  save: boolean
+}
+
+{
+  listingId: Num,
+  share: boolean
+}
+```
 
 ### DELETE
 ```
 /api/rooms/:id/save
 ```
 Remove a saved listing to be unsaved.
+
+
+### UPDATE
+```
+/api/rooms/:id/photos/:id/description
+```
+Updates a description of a photo, but only for a user who owns the listing.
 
 ## Development
 

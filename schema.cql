@@ -8,6 +8,7 @@ USE photo_gallery;
 CREATE TABLE IF NOT EXISTS photos (
   id uuid,
   photo text,
+  description text,
   PRIMARY KEY (id)
 );
 CREATE TABLE IF NOT EXISTS listings (

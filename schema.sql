@@ -7,6 +7,7 @@ CREATE TABLE photos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   listingsId INT,
   photo TEXT,
+  description TEXT,
   FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE
   );
 CREATE TABLE listings (

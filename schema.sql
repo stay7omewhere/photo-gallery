@@ -8,14 +8,12 @@ CREATE TABLE photos (
   listingsId INT NOT NULL,
   photo TEXT NOT NULL,
   photoDescription TEXT,
-  FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE
   );
 
 CREATE TABLE listings (
   id INT SERIAL PRIMARY KEY,
   usersId INT NOT NULL,
   saved BOOLEAN DEFAULT FALSE
-  FOREIGN KEY (usersId) REFERENCES users (id) ON DELETE CASCADE
   );
 
 CREATE TABLE users (
@@ -28,7 +26,10 @@ CREATE TABLE users (
 CREATE TABLE relationUsersListings (
   userId INT NOT NULL,
   listingsId INT NOT NULL,
-  FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE,
-  FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE,
   UNIQUE (usersID, listingsId)
 );
+
+ALTER TABLE photo_gallery.photos ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;
+ALTER TABLE photo_gallery.listings ADD FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE;
+ALTER TABLE photo_gallery.relationUsersListings ADD FOREIGN KEY (usersId) REFERENCES users (id) ON DELETE CASCADE;
+ALTER TABLE photo_gallery.relationUsersListings ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;

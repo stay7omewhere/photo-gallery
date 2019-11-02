@@ -4,14 +4,23 @@ CREATE DATABASE photo_gallery;
 USE photo_gallery;
 
 CREATE TABLE photos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  listingsId INT,
-  photo TEXT,
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  listingsId INT NOT NULL,
+  photo TEXT NOT NULL,
   description TEXT,
   FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE
   );
+
 CREATE TABLE listings (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  saved BOOLEAN,
-  shared BOOLEAN
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  saved BOOLEAN DEFAULT FALSE
   );
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  firstName VARCHAR(100) NOT NULL,
+  lastName VARCHAR(100),
+  FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE
+);
+

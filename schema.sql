@@ -29,7 +29,7 @@ CREATE TABLE relationUsersListings (
   UNIQUE (usersID, listingsId)
 );
 
-ALTER TABLE photo_gallery.photos ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;
-ALTER TABLE photo_gallery.listings ADD FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE;
-ALTER TABLE photo_gallery.relationUsersListings ADD FOREIGN KEY (usersId) REFERENCES users (id) ON DELETE CASCADE;
-ALTER TABLE photo_gallery.relationUsersListings ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;
+ALTER TABLE photos ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;
+ALTER TABLE listings ADD FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE;
+ALTER TABLE relationUsersListings ADD FOREIGN KEY (usersId) REFERENCES users (id) ON DELETE CASCADE;
+ALTER TABLE relationUsersListings ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;

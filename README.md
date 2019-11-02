@@ -43,19 +43,13 @@ Renders photos of a specific listing.
 ### POST
 ```
 /api/rooms/:id/save
-/api/rooms/:id/share
 ```
-Each route respectivaly saves and shares specific listing to the database.
+Route saves specific listing to the database.
 * Saves a JSON object to the database in the form:
 ```
 {
   listingId: Num,
   save: boolean
-}
-
-{
-  listingId: Num,
-  share: boolean
 }
 ```
 

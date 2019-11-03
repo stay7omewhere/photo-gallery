@@ -6,15 +6,13 @@ USE photo_gallery;
 CREATE TABLE photos (
   id INT SERIAL PRIMARY KEY,
   listingsId INT NOT NULL,
-  photo TEXT NOT NULL,
+  photoUrl TEXT NOT NULL,
   photoDescription TEXT,
-  );
+);
 
 CREATE TABLE listings (
   id INT SERIAL PRIMARY KEY,
-  usersId INT NOT NULL,
-  saved BOOLEAN DEFAULT FALSE
-  );
+);
 
 CREATE TABLE users (
   id INT SERIAL PRIMARY KEY,
@@ -30,6 +28,5 @@ CREATE TABLE relationUsersListings (
 );
 
 ALTER TABLE photos ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;
-ALTER TABLE listings ADD FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE;
 ALTER TABLE relationUsersListings ADD FOREIGN KEY (usersId) REFERENCES users (id) ON DELETE CASCADE;
 ALTER TABLE relationUsersListings ADD FOREIGN KEY (listingsId) REFERENCES listings (id) ON DELETE CASCADE;

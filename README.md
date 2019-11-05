@@ -51,7 +51,10 @@ Route saves specific listing to the database.
 ```
 {
   userId: Num,
-  savedListingId: Num
+  listingsId: Num
+  username String,
+  firstName String,
+  lastName String
 }
 ```
 

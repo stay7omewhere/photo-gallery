@@ -35,8 +35,10 @@ Renders photos of a specific listing.
 * Returns a JSON object containing data of the form:
 ```
 {
-  listingId: Num,
-  photos: Array
+  photoId: Num,
+  listingsId: Num,
+  photoUrl: String,
+  photoDescription String
 }
 ```
 
@@ -48,8 +50,8 @@ Route saves specific listing to the database.
 * Saves a JSON object to the database in the form:
 ```
 {
-  listingId: Num,
-  save: boolean
+  userId: Num,
+  savedListingId: Num
 }
 ```
 

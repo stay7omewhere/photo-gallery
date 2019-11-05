@@ -32,14 +32,25 @@ Serves up static files.
 /api/rooms/:id/photos/
 ```
 Renders photos of a specific listing.
-* Returns a JSON object containing data of the form:
+* Returns an array containing JSON objects with data of the form:
 ```
-{
-  photoId: Num,
-  listingsId: Num,
-  photoUrl: String,
-  photoDescription String
-}
+[
+  {
+    photoId: Num,
+    listingId: Num,
+    photoUrl: String,
+    photoDescription: String
+  },
+    .
+    .
+    .
+  {
+    photoId: Num,
+    listingId: Num,
+    photoUrl: String,
+    photoDescription: String
+  }
+];
 ```
 
 ### POST
@@ -51,10 +62,10 @@ Route saves specific listing to the database.
 ```
 {
   userId: Num,
-  listingsId: Num
-  username String,
-  firstName String,
-  lastName String
+  listingId: Num
+  username: String,
+  firstName: String,
+  lastName: String
 }
 ```
 

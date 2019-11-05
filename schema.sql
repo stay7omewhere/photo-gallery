@@ -5,7 +5,7 @@ USE photo_gallery;
 
 CREATE TABLE photos (
   id INT SERIAL PRIMARY KEY,
-  listingsId INT NOT NULL,
+  listingId INT NOT NULL,
   photoUrl TEXT NOT NULL,
   photoDescription VARCHAR(160),
 );
@@ -23,7 +23,7 @@ CREATE TABLE users (
 
 CREATE TABLE relationUsersListings (
   userId INT NOT NULL,
-  listingsId INT NOT NULL,
+  listingId INT NOT NULL,
   UNIQUE (usersID, listingsId)
 );
 

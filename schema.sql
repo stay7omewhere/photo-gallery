@@ -7,7 +7,7 @@ CREATE TABLE photos (
   id INT SERIAL PRIMARY KEY,
   listingsId INT NOT NULL,
   photoUrl TEXT NOT NULL,
-  photoDescription TEXT,
+  photoDescription VARCHAR(160),
 );
 
 CREATE TABLE listings (

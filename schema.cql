@@ -7,7 +7,7 @@ USE photo_gallery;
 
 CREATE TABLE IF NOT EXISTS photos (
   id integer,
-  listingsId integer,
+  listingId integer,
   photoUrl text,
   description text,
   PRIMARY KEY (listingsId, id)

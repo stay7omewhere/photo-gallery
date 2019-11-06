@@ -5,8 +5,8 @@ const path = require('path');
 const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/photos.csv'));
 writeUsers.write('id,photoUrl,description\n', 'utf8');
 
-writeOneHundredAndFiftyMillionPhotos = (writer, encoding, callback) => {
-  let i = 500;
+writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
+  let i = 120000000;
   let id = 0;
   write = () => {
     let ok = true;
@@ -29,6 +29,6 @@ writeOneHundredAndFiftyMillionPhotos = (writer, encoding, callback) => {
   write();
 };
 
-writeOneHundredAndFiftyMillionPhotos(writeUsers, 'utf-8', () => {
+writeOneHundredAndTwentyMillionPhotos(writeUsers, 'utf-8', () => {
   writeUsers.end();
 });

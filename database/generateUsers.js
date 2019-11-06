@@ -6,7 +6,7 @@ const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/
 writeUsers.write('id,username,firstName,lastName\n', 'utf8');
 
 writeTenMillionUsers = (writer, encoding, callback) => {
-  let i = 10;
+  let i = 10000000;
   let id = 0;
   write = () => {
     let ok = true;

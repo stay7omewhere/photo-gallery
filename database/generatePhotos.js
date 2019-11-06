@@ -2,13 +2,13 @@ const faker = require('faker');
 const fs = require('fs');
 const path = require('path');
 
-const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/listings.csv'));
+const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/photos.csv'));
 writeUsers.write('id,photoUrl,description\n', 'utf8');
 
-function writeOneHundredAndFiftyMillionPhotos(writer, encoding, callback) {
+writeOneHundredAndFiftyMillionPhotos = (writer, encoding, callback) => {
   let i = 500;
   let id = 0;
-  function write() {
+  write = () => {
     let ok = true;
     do {
       i -= 1;
@@ -25,9 +25,9 @@ function writeOneHundredAndFiftyMillionPhotos(writer, encoding, callback) {
     if (i > 0) {
       writer.once('drain', write);
     }
-  }
-  write()
-}
+  };
+  write();
+};
 
 writeOneHundredAndFiftyMillionPhotos(writeUsers, 'utf-8', () => {
   writeUsers.end();

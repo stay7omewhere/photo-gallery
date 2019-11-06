@@ -1,13 +1,14 @@
 const faker = require('faker');
 const fs = require('fs');
+const path = require('path');
 
-const writeUsers = fs.createWriteStream('listings.csv');
+const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/listings.csv'));
 writeUsers.write('id\n', 'utf8');
 
-function writeTenMillionListings(writer, encoding, callback) {
-  let i = 10000000;
+writeTenMillionListings = (writer, encoding, callback) => {
+  let i = 10;
   let id = 0;
-  function write() {
+  write = () => {
     let ok = true;
     do {
       i -= 1;
@@ -22,9 +23,9 @@ function writeTenMillionListings(writer, encoding, callback) {
     if (i > 0) {
       writer.once('drain', write);
     }
-  }
-  write()
-}
+  };
+  write();
+};
 
 writeTenMillionListings(writeUsers, 'utf-8', () => {
   writeUsers.end();

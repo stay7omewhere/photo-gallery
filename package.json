@@ -13,7 +13,8 @@
     "start": "node server/index.js",
     "db": "node database/seed.js",
     "test": "jest",
-    "deploy": "npm run build & npm run db & npm run start"
+    "deploy": "npm run build & npm run db & npm run start",
+    "generate-csv": "node ./database/seedingPostgresDb.js"
   },
   "dependencies": {
     "classnames": "^2.2.6",

@@ -17,10 +17,10 @@ writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
       if (id % 100000 === 0) {
         console.log(id);
       }
+      const listingId = j;
       if (id % 12 === 0) {
         j += 1;
       }
-      const listingId = j;
       const photoUrl = faker.image.image();
       const photoDescription = faker.lorem.sentence();
       const data = `${listingId},${photoUrl},${photoDescription}\n`;

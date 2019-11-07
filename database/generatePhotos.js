@@ -13,7 +13,9 @@ writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
     do {
       i -= 1;
       id += 1;
-      console.log(id);
+      if (id % 100000 === 0) {
+        console.log(id);
+      }
       const photoUrl = faker.image.image();
       const description = faker.lorem.sentence();
       const data = `${id},${photoUrl},${description}\n`;

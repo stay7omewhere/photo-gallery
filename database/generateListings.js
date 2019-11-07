@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/listings.csv'));
-writeUsers.write('id,listingName\n', 'utf8');
+writeUsers.write('listingName\n', 'utf8');
 
 writeTenMillionListings = (writer, encoding, callback) => {
   let i = 10000000;

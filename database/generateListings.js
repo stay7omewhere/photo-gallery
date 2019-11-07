@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/listings.csv'));
-writeUsers.write('id\n', 'utf8');
+writeUsers.write('id,listingName\n', 'utf8');
 
 writeTenMillionListings = (writer, encoding, callback) => {
   let i = 10000000;
@@ -16,7 +16,8 @@ writeTenMillionListings = (writer, encoding, callback) => {
       if (id % 100000 === 0) {
         console.log(id);
       }
-      const data = `${id}\n`;
+      const listingName = faker.lorem.word();
+      const data = `${listingName}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {

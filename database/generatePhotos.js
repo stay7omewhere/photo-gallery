@@ -17,11 +17,9 @@ writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
       if (id % 100000 === 0) {
         console.log(id);
       }
-
       if (id % 12 === 0) {
         j += 1;
       }
-
       const listingId = j;
       const photoUrl = faker.image.image();
       const description = faker.lorem.sentence();

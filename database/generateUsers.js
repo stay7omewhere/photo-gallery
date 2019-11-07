@@ -13,6 +13,7 @@ writeTenMillionUsers = (writer, encoding, callback) => {
     do {
       i -= 1;
       id += 1;
+      console.log(id);
       const username = faker.internet.userName();
       const firstName = faker.name.firstName();
       const lastName = faker.name.lastName();

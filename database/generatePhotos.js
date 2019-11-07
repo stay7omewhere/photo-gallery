@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/photos.csv'));
-writeUsers.write('listingId,photoUrl,description\n', 'utf8');
+writeUsers.write('listingId,photoUrl,photoDescription\n', 'utf8');
 
 writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
   let i = 120000000;
@@ -22,8 +22,8 @@ writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
       }
       const listingId = j;
       const photoUrl = faker.image.image();
-      const description = faker.lorem.sentence();
-      const data = `${listingId},${photoUrl},${description}\n`;
+      const photoDescription = faker.lorem.sentence();
+      const data = `${listingId},${photoUrl},${photoDescription}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {

@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/users.csv'));
-writeUsers.write('id,username,firstName,lastName\n', 'utf8');
+writeUsers.write('username,firstName,lastName\n', 'utf8');
 
 writeTenMillionUsers = (writer, encoding, callback) => {
   let i = 10000000;
@@ -13,11 +13,13 @@ writeTenMillionUsers = (writer, encoding, callback) => {
     do {
       i -= 1;
       id += 1;
-      console.log(id);
+      if (id % 100000 === 0) {
+        console.log(id);
+      }
       const username = faker.internet.userName();
       const firstName = faker.name.firstName();
       const lastName = faker.name.lastName();
-      const data = `${id},${username},${firstName},${lastName}\n`;
+      const data = `${username},${firstName},${lastName}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {

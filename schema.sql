@@ -12,6 +12,7 @@ CREATE TABLE photos (
 
 CREATE TABLE listings (
   id SERIAL PRIMARY KEY
+  listingName VARCHAR(100)
 );
 
 CREATE TABLE users (
@@ -32,4 +33,10 @@ ALTER TABLE relationUsersListings ADD FOREIGN KEY (userId) REFERENCES users (id)
 ALTER TABLE relationUsersListings ADD FOREIGN KEY (listingId) REFERENCES listings (id) ON DELETE CASCADE;
 
 COPY users(username,firstName,lastName)
-FROM '/Users/Faith/Documents/SDC/photo-gallery/database/csvdatafiles/users.csv' DELIMITER ',' CSV HEADER;
+FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/users.csv' DELIMITER ',' CSV HEADER;
+
+COPY listings(listingName)
+FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/listings.csv' DELIMITER ',' CSV HEADER;
+
+COPY photos(listingId,photoUrl,photoDescription)
+FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/photos.csv' DELIMITER ',' CSV HEADER;

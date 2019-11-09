@@ -23,4 +23,6 @@ CREATE TABLE IF NOT EXISTS users (
   PRIMARY KEY (id, savedListingId)
 );
 
+COPY photo_gallery.users (id,savedListingId,username,firstName,lastName) FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/userswithsavedlistings.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+
 COPY photo_gallery.photos (id,listingId,photoUrl,description) FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/photoswithid.csv' WITH DELIMITER=',' AND HEADER=TRUE;

@@ -37,7 +37,7 @@ writeTenMillionUsersWithTwentySavedListings = (writer, encoding, callback) => {
 
         IsUniqueThenAddUniqueListing(listingId)
 
-        const data = `${id},${listingId}${username},${firstName},${lastName}\n`;
+        const data = `${id},${listingId},${username},${firstName},${lastName}\n`;
 
         if (i === 0) {
           writer.write(data, encoding, callback);

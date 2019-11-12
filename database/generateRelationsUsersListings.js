@@ -6,14 +6,14 @@ const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/
 writeUsers.write('userId,listingId\n', 'utf8');
 
 writeTwentyMillionUserSavedListings = (writer, encoding, callback) => {
-  let i = 200000000;
+  let i = 10000000;
   let id = 0;
   write = () => {
     let ok = true;
     do {
       i -= 1;
       id += 1;
-      if (id % 100000 === 0) {
+      if (id % 10000 === 0) {
         console.log(id);
       }
 

@@ -6,7 +6,7 @@ module.exports = {
     db.client.execute(query, { prepare: true })
       .then(result => {
         console.log('success!');
-        res.status(200).send(result)
+        res.status(200).send(result.rows);
       })
       .catch(error => {
         console.log('error!!!');

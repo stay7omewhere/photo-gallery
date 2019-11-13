@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use('/rooms/:id', express.static('public'));
+app.use('/rooms/:id', express.static('/Users/Faith/Documents/photo-gallery/public'));
 
 app.get('/api/rooms/:id/photos/', controllers.getPhotosOfListing);
 

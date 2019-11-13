@@ -5,7 +5,7 @@ module.exports = {
     console.log(req.body);
 
     const query = `SELECT * FROM photos WHERE listingId = ${req.body.listingId}`;
-    client.execute(query, params, { prepare: true })
+    db.client.execute(query, params, { prepare: true })
       .then(result => res.status(200).send(result));
   }
 }

@@ -40,3 +40,6 @@ FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/listings.csv' D
 
 COPY photos(listingId,photoUrl,photoDescription)
 FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/photos.csv' DELIMITER ',' CSV HEADER;
+
+COPY relationUsersListings(userId,listingId)
+FROM '/Users/Faith/Documents/photo-gallery/database/csvdatafiles/relationUsersListings.csv' DELIMITER ',' CSV HEADER;

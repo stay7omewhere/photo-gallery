@@ -1,4 +1,5 @@
 const cassandra = require('cassandra-driver');
+const assert = require('assert');
 
 const client = new cassandra.Client({
   contactPoints: ['127.0.0.1'],
@@ -7,6 +8,8 @@ const client = new cassandra.Client({
 });
 
 client.connect((err) => {
-  // assert.ifError(err);
-  console.log(err);
+  assert.ifError(err);
+  console.log('error', err);
 });
+
+module.exports.client = client;

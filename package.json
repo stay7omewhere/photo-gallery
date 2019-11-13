@@ -17,6 +17,7 @@
     "seed-cassandra": "cqlsh < schema.cql"
   },
   "dependencies": {
+    "cassandra-driver": "^4.3.1",
     "classnames": "^2.2.6",
     "identity-obj-proxy": "^3.0.0",
     "newrelic": "^6.1.0"

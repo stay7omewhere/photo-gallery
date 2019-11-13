@@ -2,10 +2,15 @@ const db = require('./index.js');
 
 module.exports = {
   getPhotosOfListing: (req, res) => {
-    console.log(req.body);
-
-    const query = `SELECT * FROM photos WHERE listingId = ${req.body.listingId}`;
+    const query = `SELECT * FROM photos WHERE listingId = ${req.params.id}`;
     db.client.execute(query, { prepare: true })
-      .then(result => res.status(200).send(result));
+      .then(result => {
+        console.log('success!');
+        res.status(200).send(result)
+      })
+      .catch(error => {
+        console.log('error!!!');
+        res.status(500).send(error);
+      })
   }
 }

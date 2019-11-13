@@ -6,6 +6,7 @@ const client = new cassandra.Client({
   keyspace: 'photo_gallery'
 });
 
-client.connect(function (err) {
-  assert.ifError(err);
+client.connect((err) => {
+  // assert.ifError(err);
+  console.log(err);
 });

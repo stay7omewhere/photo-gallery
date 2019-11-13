@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "identity-obj-proxy": "^3.0.0"
+    "identity-obj-proxy": "^3.0.0",
+    "newrelic": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",

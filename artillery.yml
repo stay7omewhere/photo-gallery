@@ -1,12 +1,14 @@
 config:
   target: 'http://localhost:3001'
   phases:
-    - duration: 10
-      arrivalRate: 1
+    - duration: 60
+      arrivalRate: 10
   defaults:
     headers:
       x-my-service-auth: '987401838271002188298567'
 scenarios:
   - flow:
-    - get:
-        url: "/api/rooms/{{$randomNumber(1, 10000000)}}/photos"
+    - loop:
+      - get:
+          url: "/api/rooms/{{$randomNumber(1, 10000000)}}/photos"
+      count: 100

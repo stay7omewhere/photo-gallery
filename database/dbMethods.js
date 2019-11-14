@@ -15,12 +15,12 @@ module.exports = {
   },
 
   saveListing: (req, res) => {
-    const query = `INSERT INTO users (id, savedListingId, username, firstName, lastName) VALUES (${req.params.id}, ${req.params.savedListingId}, "${req.params.username}", "${req.params.firstName}", "${req.params.lastName}")`;
+    const query = `INSERT INTO users (id, savedListingId, username, firstName, lastName) VALUES (${req.body.id}, ${req.body.savedListingId}, '${req.body.username}', '${req.body.firstName}', '${req.body.lastName}')`;
 
     db.client.execute(query, { prepare: true })
       .then(result => {
         console.log('posted to db!');
-        res.status(200).send(result);
+        res.status(200).send();
       })
       .catch(error => {
         console.log('error with POSTing');

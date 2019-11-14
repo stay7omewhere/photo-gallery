@@ -1,7 +1,9 @@
 const express = require('express');
+const controllers = require('../database/dbMethods.js');
+const newrelic = require('newrelic');
+
 const app = express();
 const port = 3001;
-const controllers = require('../database/dbMethods.js');
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');

@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use('/rooms/:id', express.static('/Users/Faith/Documents/photo-gallery/public'));
 
-app.get('/api/rooms/:id/photos/', controllers.getPhotosOfListing);
+app.get('/api/rooms/:id/photos', controllers.getPhotosOfListing);
 app.post('/api/rooms/:id/save', controllers.saveListing);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

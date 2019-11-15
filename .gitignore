@@ -26,3 +26,5 @@ dist/
 public/bundle.js
 
 /database/csvdatafiles
+
+newrelic.js

@@ -31,7 +31,7 @@ class App extends React.Component {
 
   componentDidMount() {
     // get photos data from server (reads from db)
-    $.get(`http://localhost:3001/api/rooms/${this.state.listingId}/photos`, null, (photos) => {
+    $.get(`http://localhost:3001/api${window.location.pathname}photos`, null, (photos) => {
       this.setState({photos: photos});
     }, 'json');
   }

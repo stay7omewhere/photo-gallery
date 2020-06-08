@@ -1,24 +1,15 @@
-const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://database/o2znzPhotos');
+const cassandra = require('cassandra-driver');
+const assert = require('assert');
 
-var listingSchema = mongoose.Schema({
-  listingId: {
-    type: Number,
-    unique: true
-  },
-  photos: Array
+const client = new cassandra.Client({
+  contactPoints: ['13.56.158.215', '54.183.167.135', '13.56.182.77'],
+  localDataCenter: 'us-west',
+  keyspace: 'photo_gallery'
 });
 
-var ListingModel = mongoose.model('Listing', listingSchema);
+client.connect((err) => {
+  assert.ifError(err);
+  console.log('error', err);
+});
 
-var insertListing = function(listing) {
-  return new ListingModel(listing).save();
-};
-
-var findListing = function(listingId) {
-  return ListingModel.find({listingId: listingId}).exec();
-};
-
-exports.insertListing = insertListing;
-exports.findListing = findListing;
+module.exports.client = client;

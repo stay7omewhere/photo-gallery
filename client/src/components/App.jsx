@@ -31,13 +31,13 @@ class App extends React.Component {
 
   componentDidMount() {
     // get photos data from server (reads from db)
-    $.get(`http://3.133.19.147/photos/${this.state.listingId}`, null, (photos) => {
+    $.get(`http://localhost:3001/api${window.location.pathname}photos`, null, (photos) => {
       this.setState({photos: photos});
     }, 'json');
   }
 
   viewPhotoHandler(photoIndex = 0) {
-    // render Slideshow component with specific photo 
+    // render Slideshow component with specific photo
     this.setState({
       showSlideshow: true,
       currentPhotoIndex: photoIndex

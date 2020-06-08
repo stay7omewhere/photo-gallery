@@ -2,10 +2,10 @@ const faker = require('faker');
 const fs = require('fs');
 const path = require('path');
 
-const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/photos.csv'));
-writeUsers.write('listingId,photoUrl,photoDescription\n', 'utf8');
+const writeUsers = fs.createWriteStream(path.resolve(__dirname, './csvdatafiles/photoswithid.csv'));
+writeUsers.write('id,listingId,photoUrl,photoDescription\n', 'utf8');
 
-writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
+writeOneHundredAndTwentyMillionPhotosWithId = (writer, encoding, callback) => {
   let i = 120000000;
   let id = 0;
   let j = 1;
@@ -23,7 +23,7 @@ writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
       }
       const photoUrl = faker.image.image();
       const photoDescription = faker.lorem.sentence();
-      const data = `${listingId},${photoUrl},${photoDescription}\n`;
+      const data = `${id},${listingId},${photoUrl},${photoDescription}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
@@ -37,6 +37,6 @@ writeOneHundredAndTwentyMillionPhotos = (writer, encoding, callback) => {
   write();
 };
 
-writeOneHundredAndTwentyMillionPhotos(writeUsers, 'utf-8', () => {
+writeOneHundredAndTwentyMillionPhotosWithId(writeUsers, 'utf-8', () => {
   writeUsers.end();
 });

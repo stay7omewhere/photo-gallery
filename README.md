@@ -12,7 +12,7 @@ Serves up static files.
 
 ### GET
 ```
-/api/rooms/:id/photos/
+/api/rooms/:id/photos
 ```
 Renders photos of a specific listing.
 * Returns an array containing JSON objects with data of the form:
